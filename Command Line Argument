@@ -1,0 +1,41 @@
+using System;
+using A = System.Console;
+class P1
+{
+    public double F1()
+    {
+        A.WriteLine(" ENTER THE NUMBER");
+        double num = double.Parse(A.ReadLine());
+        return num;
+    
+    }
+}
+
+
+
+
+// main function 
+
+using System;
+using A = System.Console;
+class Project
+{
+    // Command Line Argument program
+    public static void Main(string[] args)
+    {
+        for (int i = 0; i < args.Length; i++)
+        {
+            double number = double.Parse(args[i]);
+            double sqrt = Math.Sqrt(number);
+
+            A.WriteLine("Square root of number: " + " is " + sqrt);
+            Console.ReadKey();
+
+
+        }
+
+    }
+}
+        
+       
+   
