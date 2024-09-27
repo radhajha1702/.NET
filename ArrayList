@@ -1,0 +1,24 @@
+using System;
+using System.Collections;
+
+namespace Arraylist
+{
+    class Arrlist
+    {
+     public static void Main(string[] args)
+        {
+            // creating array list
+            ArrayList Array = new ArrayList();
+
+            // adding elements in the array list
+            Array.Capacity = 20;
+            Array.Add("Hello");
+            Array.Add("This is Computer Applicatiions Department");
+            Array.Insert(1, "Hi");
+            Array.Insert(2, "Bye");
+            Console.WriteLine("count of array is:" + Array.Count);
+            Console.WriteLine("Capacity of array is:" + Array.Capacity);
+
+        }
+    }
+}
