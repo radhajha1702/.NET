@@ -1,0 +1,58 @@
+using System;
+ 
+class ADD {
+     
+    int x, y;
+    int f, p, s;
+ 
+    
+    public ADD(int a, int b)
+    {
+        x = a;
+        y = b;
+    }
+ 
+   
+    public ADD(int a, int b, int c)
+    {
+        f = a;
+        p = b;
+        s = c;
+    }
+ 
+    
+    public void show()
+    {
+        Console.WriteLine("1st constructor (int + int): {0} ", 
+                                                     (x + y));
+    }
+ 
+   
+    public void show1()
+    {
+        Console.WriteLine("2nd constructor (int + int + int): {0}", 
+                                                      (f + p + s));
+    }
+}
+ 
+// Driver Class
+class GFG {
+     
+    
+    static void Main()
+    {
+         
+        
+        ADD g = new ADD(15, 20);
+         
+        
+        g.show();
+ 
+       
+        ADD q = new ADD(15, 20, 30);
+     
+     
+        q.show1();
+         
+    }
+}
