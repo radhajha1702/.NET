@@ -1,0 +1,24 @@
+using System;  
+
+   public class University
+    {  
+       public void study() { Console.WriteLine("in University..."); }  
+   }  
+   public class MCA: University
+   {  
+       public void play() { Console.WriteLine("studying MCA..."); }  
+   }  
+   public class Students : MCA 
+   {  
+       public void learn() { Console.WriteLine("Students are in university studying in class..."); }  
+
+   }  
+   class TestInheritance2{  
+       public static void Main(string[] args)  
+        {  
+            learn d1 = new learn();  
+            d1.study();  
+            d1.play();  
+            d1.learn();  
+        }  
+    }  
