@@ -1,0 +1,31 @@
+using System;  
+public interface Drawing
+{  
+    void draw();  
+}  
+public class Rectangle : Drawing
+{  
+    public void draw()  
+    {  
+
+        Console.WriteLine("drawing rectangle...");  
+    }  
+}  
+public class Circle : Drawing
+{  
+    public void draw()  
+    {  
+        Console.WriteLine("drawing circle...");  
+    }  
+}  
+public class TestInterface  
+{  
+    public static void Main()  
+    {  
+        Drawing d;  
+        d = new Rectangle();  
+        d.draw();  
+        d = new Circle();  
+        d.draw();  
+    }  
+}  
