@@ -1,0 +1,21 @@
+using System;
+using System.Collections;
+
+class Program
+{
+    public static void Main()
+    {
+        // create an ArrayList
+        ArrayList student = new ArrayList();
+
+        // add elements to ArrayList
+        student.Add("Radha");
+        student.Add(5);
+
+        // display every element of myList 
+        for (int i = 0; i < student.Count; i++)
+        {
+            Console.WriteLine(student[i]);
+        }
+    }
+}
