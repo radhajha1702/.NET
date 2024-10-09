@@ -1,0 +1,16 @@
+using System;
+using A = System.Console;
+public class project5
+{
+    public static void Main(string[] args)
+    {
+        for (int i = 0; i < args.Length; i++)
+        {
+            double number = double.Parse(args[i]);
+            double squareroot = Math.Sqrt(number);
+            A.WriteLine("sq root of no: " + number + "is" + squareroot);
+
+        }
+        A.ReadKey();
+    }
+}
