@@ -1,0 +1,38 @@
+using System;
+
+namespace DelegateExample
+{
+    //  Define a delegate
+    public delegate void Notify(string message);
+
+    class Program
+    {
+        //  Create a method that matches the delegate's signature
+        static void NotifyUser(string message)
+        {
+            Console.WriteLine("Notification: " + message);
+        }
+
+        static void Main(string[] args)
+        {
+            //  Instantiate the delegate
+            Notify notifyDelegate = NotifyUser;
+
+            //Invoke the delegate
+            notifyDelegate("You have a new message!");
+
+            // Multicast delegate example
+            Notify multiDelegate = NotifyUser;
+            multiDelegate += AnotherNotification; // Adding another method
+
+            // Invoke multicast delegate
+            multiDelegate("You have updates!");
+        }
+
+        // Another method that matches the delegate's signature
+        static void AnotherNotification(string message)
+        {
+            Console.WriteLine("Another Notification: " + message);
+        }
+    }
+}
