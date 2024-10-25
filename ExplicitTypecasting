@@ -1,0 +1,8 @@
+using System;
+namespace Typecasting;
+
+double myDouble = 9.78;
+int myInt = (int) myDouble;    
+
+Console.WriteLine(myDouble);   // Outputs 9.78
+Console.WriteLine(myInt);      // Outputs 9
