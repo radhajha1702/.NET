@@ -1,0 +1,28 @@
+using System;
+namespace DefaultConstructorExample {
+ 
+class DefaultConstructors {
+ 
+    int num;
+    string name;
+ 
+    // this would be invoked while the
+    // object of that class created.
+    Default constructors()
+    {
+        Console.WriteLine("Constructor Called");
+    }
+ 
+    // Main Method
+    public static void Main()
+    {
+ 
+      
+        DefaultConstructors obj1 = new DefaultConstructors();
+ 
+        
+        Console.WriteLine(obj1.name);
+        Console.WriteLine(obj1.num);
+    }
+}
+}
