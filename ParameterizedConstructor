@@ -1,0 +1,27 @@
+using System;
+namespace ParameterizedConstructorExample {
+ 
+class PC {
+ 
+    // data members of the class.
+    String name;
+    int id;
+ 
+    // parameterized constructor would initialized data members with the values of passed arguments while object of that class created.
+    PC(String name, int id)
+    {
+        this.name = name;
+        this.id = id;
+    }
+ 
+    // Main Method
+    public static void Main()
+    {
+ 
+        // This will invoke parameterized constructor.
+        PC obj1 = new PC("paramterized", 1);
+        Console.WriteLine("PCName = " +obj1.name +
+                         " and PCId = " + obj1.id);
+    }
+}
+}
