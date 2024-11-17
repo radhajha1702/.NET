@@ -1,0 +1,23 @@
+using System;
+class TestThis {
+ 
+    void display()
+    {
+        // calling function show()
+        this.show();
+     
+        Console.WriteLine("Inside display function");
+    }
+     
+    void show() 
+    {
+        Console.WriteLine("Inside show function");
+    }
+     
+    // Main Method
+    public static void Main(String []args) 
+    {
+        Test t1 = new Test();
+        t1.display();
+    }
+}
