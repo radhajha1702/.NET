@@ -1,0 +1,19 @@
+using System;
+namespace Constructor {
+    class Test {
+        //Declaration and initialization of static data member
+        private static int id = 5;
+        public static int Id {
+            get {
+                return id;
+            }
+        }
+        public static void print() {
+            Console.WriteLine("Test.id = " + id);
+        }
+        static void Main(string[] args) {
+            //Print the value of id
+            Test.print();
+        }
+    }
+}
