@@ -1,0 +1,14 @@
+
+Dim str As String  
+Dim abc As String  
+  
+' Initialization of String variable  
+Dim str As String = "Welcome"  
+Dim str1 As String = "Hello World"
+Dim str2 As String = Nothing  
+  
+' Initialization of an empty string  
+Dim name As String = String.Empty   
+  
+' Creating a String from char  
+Dim letter As Char() = {"H", "E",  "L", "L", "O" }  
