@@ -1,0 +1,25 @@
+Module Program
+    ' Function to add two integers
+    Function Add(a As Integer, b As Integer) As Integer
+        Return a + b
+    End Function
+
+    ' Function to add three integers
+    Function Add(a As Integer, b As Integer, c As Integer) As Integer
+        Return a + b + c
+    End Function
+
+    ' Function to add two doubles
+    Function Add(a As Double, b As Double) As Double
+        Return a + b
+    End Function
+
+    Sub Main()
+        ' Using the Add function with different arguments
+        Console.WriteLine("Add two integers: " & Add(5, 10))           ' Calls Add(a As Integer, b As Integer)
+        Console.WriteLine("Add three integers: " & Add(5, 10, 15))    ' Calls Add(a As Integer, b As Integer, c As Integer)
+        Console.WriteLine("Add two doubles: " & Add(5.5, 10.5))       ' Calls Add(a As Double, b As Double)
+
+        Console.ReadLine()
+    End Sub
+End Module
