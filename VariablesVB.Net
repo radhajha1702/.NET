@@ -1,0 +1,5 @@
+Dim Roll_no As Integer  
+Dim Emp_name As String  
+Dim Salary As Double  
+Dim Emp_id, Stud_id As Integer  
+Dim result_status As Boolean  
