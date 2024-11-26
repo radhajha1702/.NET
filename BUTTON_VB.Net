@@ -1,0 +1,11 @@
+Imports System.Windows.Forms
+
+Public Class HelloWorld
+    Public Shared Sub Main()
+        Dim form As New Form With {.Text = "Hello World App", .Size = New Drawing.Size(300, 200)}
+        Dim button As New Button With {.Text = "Click Me", .Location = New Drawing.Point(100, 70)}
+        AddHandler button.Click, Sub(sender, e) MessageBox.Show("Hello, World!", "Greeting")
+        form.Controls.Add(button)
+        Application.Run(form)
+    End Sub
+End Class
