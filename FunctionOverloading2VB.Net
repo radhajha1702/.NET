@@ -1,0 +1,22 @@
+Module FunctionOverloadingExample
+    ' Function to add two integers
+    Function Add(a As Integer, b As Integer) As Integer
+        Return a + b
+    End Function
+
+    ' Overloaded function to add three integers
+    Function Add(a As Integer, b As Integer, c As Integer) As Integer
+        Return a + b + c
+    End Function
+
+    ' Overloaded function to concatenate two strings
+    Function Add(a As String, b As String) As String
+        Return a & b
+    End Function
+
+    Sub Main()
+        Console.WriteLine("Add two integers: " & Add(5, 10))  ' Calls Add(Integer, Integer)
+        Console.WriteLine("Add three integers: " & Add(5, 10, 15))  ' Calls Add(Integer, Integer, Integer)
+        Console.WriteLine("Add two strings: " & Add("Hello, ", "World!"))  ' Calls Add(String, String)
+    End Sub
+End Module
