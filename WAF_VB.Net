@@ -1,0 +1,13 @@
+Public Class Form1
+    ' This is the Form Load Event
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set form properties (Optional)
+        Me.Text = "Basic VB.NET App"
+    End Sub
+
+    ' Button Click Event
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ' Update Label text when button is clicked
+        Label1.Text = "Hello, World!"
+    End Sub
+End Class
