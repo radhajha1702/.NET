@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    // Define a delegate
+    public delegate void SimpleEventHandler();
+
+    // Define an event based on the delegate
+    public static event SimpleEventHandler SimpleEvent;
+
+    static void Main(string[] args)
+    {
+        // Subscribe to the event
+        SimpleEvent += OnSimpleEvent;
+
+        // Trigger the event
+        Console.WriteLine("Raising the event...");
+        SimpleEvent?.Invoke();
+    }
+
+    // Event handler method
+    static void OnSimpleEvent()
+    {
+        Console.WriteLine("SimpleEvent was triggered!");
+    }
+}
