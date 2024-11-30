@@ -1,0 +1,7 @@
+Module dateNtime
+   Sub Main()
+      Console.Write("Current Time: ")
+      Console.WriteLine(Now.ToLongTimeString)
+      Console.ReadKey()
+   End Sub
+End Module
