@@ -1,0 +1,5 @@
+Class Box
+Public length As Double
+Public breadth As Double   
+Public height As Double
+End Class
