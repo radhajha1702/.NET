@@ -1,0 +1,9 @@
+Module mydirectives
+#Const age = True
+Sub Main()
+   #If age Then
+      Console.WriteLine("You are welcome to this GitHub space")
+   #End If
+   Console.ReadKey()
+End Sub
+End Module
