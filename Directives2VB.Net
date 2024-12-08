@@ -1,0 +1,21 @@
+use of the directive −
+
+Module mydirectives
+   Public Class ExternalSourceTester
+
+      Sub TestExternalSource()
+
+      #ExternalSource("c:\vbprogs\directives", 5)
+         Console.WriteLine("This is External Code. ")
+      #End ExternalSource
+
+      End Sub
+   End Class
+
+   Sub Main()
+      Dim t As New ExternalSourceTester()
+      t.TestExternalSource()
+      Console.WriteLine("In Main.")
+      Console.ReadKey()
+
+   End Sub
