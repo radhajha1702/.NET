@@ -1,0 +1,43 @@
+Imports System.Data.SqlClient
+
+Module Module1
+    Sub Main()
+        ' Define the connection string
+        Dim connectionString As String = "Server=YOUR_SERVER_NAME; Database=YOUR_DATABASE_NAME; Integrated Security=True;"
+        
+        ' Define the SQL query
+        Dim query As String = "SELECT * FROM YourTableName"
+        
+        ' Create the connection object
+        Using connection As New SqlConnection(connectionString)
+            Try
+                ' Open the connection
+                connection.Open()
+                Console.WriteLine("Connection Successful!")
+
+                ' Create the command object
+                Using command As New SqlCommand(query, connection)
+                    ' Execute the query
+                    Using reader As SqlDataReader = command.ExecuteReader()
+                        ' Display the data
+                        While reader.Read()
+                            Console.WriteLine("ID: " & reader("ID") & ", Name: " & reader("Name"))
+                        End While
+                    End Using
+                End Using
+            Catch ex As Exception
+                ' Handle any errors
+                Console.WriteLine("Error: " & ex.Message)
+            Finally
+                ' Close the connection
+                If connection.State = ConnectionState.Open Then
+                    connection.Close()
+                End If
+            End Try
+        End Using
+
+        ' Pause the console
+        Console.WriteLine("Press any key to exit...")
+        Console.ReadKey()
+    End Sub
+End Module
