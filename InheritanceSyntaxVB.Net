@@ -1,0 +1,7 @@
+<access_modifier> Class <Name_of_baseClass>  
+' Implementation of base class  
+End Class  
+<access_modifier> Class <Name_of_derivedClass>  
+Inherits Name_of_baseClass  
+' Implementation of derived class  
+End Class  
