@@ -1,0 +1,27 @@
+Public Class Form1
+    ' This is the main form class.
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ' Set up form title and size.
+        Me.Text = "Simple VB.NET Program"
+        Me.Size = New Size(400, 300)
+
+        ' Create a label.
+        Dim lblMessage As New Label()
+        lblMessage.Text = "Click the button to see a message."
+        lblMessage.AutoSize = True
+        lblMessage.Location = New Point(50, 50)
+        Me.Controls.Add(lblMessage)
+
+        ' Create a button.
+        Dim btnClickMe As New Button()
+        btnClickMe.Text = "Click Me"
+        btnClickMe.Size = New Size(100, 30)
+        btnClickMe.Location = New Point(50, 100)
+        Me.Controls.Add(btnClickMe)
+
+        ' Add a click event handler for the button.
+        AddHandler btnClickMe.Click, Sub(sender2, e2)
+                                         lblMessage.Text = "Hello, VB.NET!"
+                                     End Sub
+    End Sub
+End Class
