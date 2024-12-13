@@ -1,0 +1,20 @@
+Imports System.Net
+Imports System.Text
+
+Module Module1
+    Sub Main()
+        ' Perform GET request
+        Console.WriteLine("GET Response:")
+        Dim getUrl As String = "https://jsonplaceholder.typicode.com/posts/1"
+        Console.WriteLine(New WebClient().DownloadString(getUrl))
+
+        ' Perform POST request
+        Console.WriteLine(vbCrLf & "POST Response:")
+        Dim postUrl As String = "https://jsonplaceholder.typicode.com/posts"
+        Dim data As String = "{""title"":""foo"",""body"":""bar"",""userId"":1}"
+        Dim client As New WebClient()
+        client.Headers("Content-Type") = "application/json"
+        Dim response As String = client.UploadString(postUrl, "POST", data)
+        Console.WriteLine(response)
+    End Sub
+End Module
