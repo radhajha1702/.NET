@@ -1,0 +1,41 @@
+Module Module1
+    Sub Main()
+        ' Create an instance of the class
+        Dim myCollection As New SampleCollection()
+
+        ' Use the indexer to set values
+        myCollection(0) = "Apple"
+        myCollection(1) = "Banana"
+        myCollection(2) = "Cherry"
+
+        ' Use the indexer to get values
+        Console.WriteLine("Item at index 0: " & myCollection(0))
+        Console.WriteLine("Item at index 1: " & myCollection(1))
+        Console.WriteLine("Item at index 2: " & myCollection(2))
+
+        ' Output the total count
+        Console.WriteLine("Total Items: " & myCollection.Count)
+    End Sub
+End Module
+
+Public Class SampleCollection
+    ' Internal array to hold data
+    Private items(9) As String
+
+    ' Default property to act as an indexer
+    Default Public Property Item(index As Integer) As String
+        Get
+            Return items(index)
+        End Get
+        Set(value As String)
+            items(index) = value
+        End Set
+    End Property
+
+    ' Read-only property to get the total count of items
+    Public ReadOnly Property Count As Integer
+        Get
+            Return items.Length
+        End Get
+    End Property
+End Class
