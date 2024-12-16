@@ -1,0 +1,35 @@
+Module Module1
+
+    Class User
+
+        Public Sub New()
+
+            Console.WriteLine("An Instance of class created")
+
+        End Sub
+
+        Protected Overrides Sub Finalize()
+
+            Console.WriteLine("An Instance of class destroyed")
+
+        End Sub
+
+    End Class
+
+    Sub Main()
+
+        Details()
+
+        GC.Collect()
+
+        Console.ReadLine()
+
+    End Sub
+
+    Public Sub Details()
+
+        Dim user As User = New User()
+
+    End Sub
+
+End Module
