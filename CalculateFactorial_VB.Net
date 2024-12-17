@@ -1,0 +1,31 @@
+Module FactorialProgram
+
+    ' Function to calculate factorial recursively
+    Function Factorial(ByVal n As Integer) As Integer
+        If n = 0 Or n = 1 Then
+            Return 1
+        Else
+            Return n * Factorial(n - 1)
+        End If
+    End Function
+
+    Sub Main()
+        ' Variable to store user input
+        Dim number As Integer
+
+        ' Input from user
+        Console.WriteLine("Enter a positive integer to calculate its factorial:")
+        number = Convert.ToInt32(Console.ReadLine())
+
+        ' Validate input
+        If number < 0 Then
+            Console.WriteLine("Factorial is not defined for negative numbers.")
+        Else
+            ' Call factorial function and display result
+            Dim result As Integer = Factorial(number)
+            Console.WriteLine("The factorial of " & number & " is: " & result)
+        End If
+
+        ' Wait for user to see result
+        Console.ReadLine()
+
