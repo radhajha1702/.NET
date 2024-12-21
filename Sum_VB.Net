@@ -1,0 +1,20 @@
+Module Module1
+    Sub Main()
+        ' Prompt user to enter two numbers
+        Console.WriteLine("Enter the first number:")
+        Dim num1 As Integer = Convert.ToInt32(Console.ReadLine())
+
+        Console.WriteLine("Enter the second number:")
+        Dim num2 As Integer = Convert.ToInt32(Console.ReadLine())
+
+        ' Calculate the sum
+        Dim sum As Integer = num1 + num2
+
+        ' Display the result
+        Console.WriteLine("The sum of the two numbers is: " & sum)
+
+        ' Pause the console
+        Console.WriteLine("Press any key to exit...")
+        Console.ReadKey()
+    End Sub
+End Module
