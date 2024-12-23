@@ -1,0 +1,78 @@
+Imports System
+
+Module Program
+    Sub Main()
+        ' Creating an object of the Employee class
+        Dim emp As New Employee()
+
+        ' Setting values using encapsulated properties
+        emp.EmployeeId = 101
+        emp.EmployeeName = "John Doe"
+        emp.Salary = 75000
+
+        ' Displaying employee details
+        emp.DisplayEmployeeDetails()
+
+        ' Attempting to set invalid values
+        emp.EmployeeId = -1 ' Invalid ID
+        emp.EmployeeName = "" ' Invalid name
+        emp.Salary = -5000 ' Invalid salary
+    End Sub
+End Module
+
+' Class with encapsulation
+Public Class Employee
+    ' Private fields
+    Private _employeeId As Integer
+    Private _employeeName As String
+    Private _salary As Double
+
+    ' Public property for Employee ID with validation
+    Public Property EmployeeId As Integer
+        Get
+            Return _employeeId
+        End Get
+        Set(value As Integer)
+            If value > 0 Then
+                _employeeId = value
+            Else
+                Console.WriteLine("Employee ID must be positive!")
+            End If
+        End Set
+    End Property
+
+    ' Public property for Employee Name with validation
+    Public Property EmployeeName As String
+        Get
+            Return _employeeName
+        End Get
+        Set(value As String)
+            If Not String.IsNullOrEmpty(value) Then
+                _employeeName = value
+            Else
+                Console.WriteLine("Employee name cannot be empty!")
+            End If
+        End Set
+    End Property
+
+    ' Public property for Salary with validation
+    Public Property Salary As Double
+        Get
+            Return _salary
+        End Get
+        Set(value As Double)
+            If value >= 0 Then
+                _salary = value
+            Else
+                Console.WriteLine("Salary must be non-negative!")
+            End If
+        End Set
+    End Property
+
+    ' Method to display employee details
+    Public Sub DisplayEmployeeDetails()
+        Console.WriteLine($"Employee ID: {_employeeId}")
+        Console.WriteLine($"Employee Name: {_employeeName}")
+        Console.WriteLine($"Salary: {_salary:C}") ' Format as currency
+    End Sub
+End Class
