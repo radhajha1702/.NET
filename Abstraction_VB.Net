@@ -1,0 +1,42 @@
+Imports System
+
+Module Program
+    Sub Main()
+        ' Creating an object of the derived class
+        Dim car As New Sedan()
+        car.Start()
+        car.Drive()
+        car.Stop()
+    End Sub
+End Module
+
+' Abstract class
+Public MustInherit Class Vehicle
+    ' Abstract methods (must be implemented by derived classes)
+    Public MustOverride Sub Start()
+    Public MustOverride Sub Drive()
+    Public MustOverride Sub Stop()
+
+    ' Concrete method (can be inherited as is)
+    Public Sub DisplayType()
+        Console.WriteLine("This is a vehicle.")
+    End Sub
+End Class
+
+' Derived class
+Public Class Sedan
+    Inherits Vehicle
+
+    ' Implementing abstract methods
+    Public Overrides Sub Start()
+        Console.WriteLine("Sedan is starting.")
+    End Sub
+
+    Public Overrides Sub Drive()
+        Console.WriteLine("Sedan is driving.")
+    End Sub
+
+    Public Overrides Sub Stop()
+        Console.WriteLine("Sedan has stopped.")
+    End Sub
+End Class
