@@ -1,0 +1,27 @@
+Imports System
+
+Module Program
+    Sub Main()
+        ' Declare variables
+        Dim num1 As Integer
+        Dim num2 As Integer
+        Dim sum As Integer
+
+        ' Get input from the user
+        Console.WriteLine("Enter the first number:")
+        num1 = Convert.ToInt32(Console.ReadLine())
+
+        Console.WriteLine("Enter the second number:")
+        num2 = Convert.ToInt32(Console.ReadLine())
+
+        ' Perform addition
+        sum = num1 + num2
+
+        ' Display the result
+        Console.WriteLine("The sum of {0} and {1} is {2}.", num1, num2, sum)
+
+        ' Wait for user to close the console
+        Console.WriteLine("Press any key to exit...")
+        Console.ReadKey()
+    End Sub
+End Module
