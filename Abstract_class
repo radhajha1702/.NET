@@ -1,0 +1,65 @@
+using System;
+
+namespace AbstractClassExample
+{
+    // Abstract base class
+    abstract class Animal
+    {
+        // Abstract method (must be implemented by derived classes)
+        public abstract void MakeSound();
+
+        // Non-abstract method (optional to override)
+        public void Sleep()
+        {
+            Console.WriteLine("The animal is sleeping.");
+        }
+    }
+
+    // Derived class 1
+    class Dog : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("The dog barks: Woof Woof!");
+        }
+    }
+
+    // Derived class 2
+    class Cat : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("The cat meows: Meow!");
+        }
+    }
+
+    // Derived class 3
+    class Cow : Animal
+    {
+        public override void MakeSound()
+        {
+            Console.WriteLine("The cow moos: Moo!");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Using polymorphism with abstract class
+            Animal dog = new Dog();
+            Animal cat = new Cat();
+            Animal cow = new Cow();
+
+            // Call the MakeSound method for each animal
+            dog.MakeSound();
+            cat.MakeSound();
+            cow.MakeSound();
+
+            // Call the common method from the abstract class
+            dog.Sleep();
+            cat.Sleep();
+            cow.Sleep();
+        }
+    }
+}
