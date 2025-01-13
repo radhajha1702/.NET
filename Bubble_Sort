@@ -1,0 +1,48 @@
+using System;
+
+class BubbleSortProgram
+{
+    static void Main(string[] args)
+    {
+        // Sample array to sort
+        int[] numbers = { 64, 34, 25, 12, 22, 11, 90 };
+
+        Console.WriteLine("Original array:");
+        PrintArray(numbers);
+
+        // Call the BubbleSort method
+        BubbleSort(numbers);
+
+        Console.WriteLine("\nSorted array:");
+        PrintArray(numbers);
+    }
+
+    // Method to perform Bubble Sort
+    static void BubbleSort(int[] arr)
+    {
+        int n = arr.Length;
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    // Swap arr[j] and arr[j+1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    // Method to print an array
+    static void PrintArray(int[] arr)
+    {
+        foreach (int item in arr)
+        {
+            Console.Write(item + " ");
+        }
+        Console.WriteLine();
+    }
+}
